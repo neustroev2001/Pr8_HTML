@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>task1</title>
+<style>
+	#car 
+	{
+		position: relative;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+	<img id="car" src="https://forpostsevastopol.ru/wp-content/uploads/2017/05/k2_items_src_37078f3752698307476fc46dd00e1403.jpg" width="800" height="500">
+	<script>
+		car.onclick = function() {
+			let start = Date.now();
+			let timer = setInterval(function() {
+				let timePassed = Date.now() - start;
+				car.style.left = timePassed / 5 + 'px';
+				if (timePassed > 2000) clearInterval(timer);
+			}, 20);
+		}
+	</script>
+</body>
+</html>
